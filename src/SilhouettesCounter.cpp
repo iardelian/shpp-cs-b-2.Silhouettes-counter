@@ -24,7 +24,6 @@ void binarization(int **bitMap, GBufferedImage* imgBuffer, int imgWidth, int img
 void marking(int x, int y, int mark, int newMark, int **bitMap, int imgWidth, int imgHeight);
 
 int main() {
-
     string imgName;
     cout << "Please, enter name of the image: ";
     cin >> imgName;
@@ -33,7 +32,6 @@ int main() {
 }
 
 int countSilhouettes(string imgName){
-
     GImage* image;
     image = new GImage(imgName);
     GWindow gw(image->getWidth(),image->getHeight());// window size is the size of the image
@@ -72,12 +70,10 @@ int countSilhouettes(string imgName){
     delete []bitMap;
     delete image;
     delete imgBuffer;
-
     return result;
 }
 // binarization of image
 void binarization(int **bitMap, GBufferedImage* imgBuffer, int imgWidth, int imgHeight){
-
     int backColor = 13750737; // color for background (HEX #d1d1d1)
     int pixRGB = 0;
     for(int y = 0; y < imgHeight; y++){
